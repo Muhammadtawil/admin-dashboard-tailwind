@@ -29,7 +29,7 @@ function CurrentDate() {
 
     // Format the current date using the formatter and update the state
     setCurrentDate(formatter.format(date));
-  }, []); // The empty dependency array ensures this effect runs only once, on component mount
+  }, [locale]); // The empty dependency array ensures this effect runs only once, on component mount
 
   return (
     <>
