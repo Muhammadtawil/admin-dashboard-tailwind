@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
 import useColorMode from '../hooks/useColorMode';
 
 const DarkModeSwitcher = () => {
   const [colorMode, setColorMode] = useColorMode();
+  // Add this effect to dynamically set the 'dark' class on the html element
+  useEffect(() => {
+    document.documentElement.classList.remove('dark', 'light');
+    document.documentElement.classList.add(colorMode as string);
+  }, [colorMode]);
+
 
   return (
     <li>
@@ -14,6 +21,7 @@ const DarkModeSwitcher = () => {
           type="checkbox"
           onChange={() => {
             if (typeof setColorMode === 'function') {
+              console.log('Toggling dark mode'); // Add this log
               setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }
           }}
