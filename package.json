@@ -26,6 +26,7 @@
     "@types/node": "20.4.8",
     "@types/react": "18.2.18",
     "apexcharts": "^3.41.1",
+    "autoprefixer": "^10.4.16",
     "date-fns": "^3.0.6",
     "dayjs": "^1.11.10",
     "dompurify": "^3.0.6",
