@@ -42,11 +42,11 @@ export default function ClientExpandedRows() {
     }
     const [fileInput, setFileInput] = useState(null);
 
-    const handleIconClick = () => {
-      if (fileInput) {
-        fileInput.click();
-      }
-    };
+    // const handleIconClick = () => {
+    //   if (fileInput) {
+    //     fileInput.click();
+    //   }
+    // };
   
     const handleFileChange = (event:any) => {
       // Handle the selected file
@@ -104,12 +104,12 @@ export default function ClientExpandedRows() {
                     </h4>
                     <div>
       <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
-        <MdAddCircleOutline onClick={handleIconClick} />
+        <MdAddCircleOutline  />
       </div>
       {/* Hidden file input */}
       <input
         type="file"
-        ref={(input) => setFileInput(input)}
+        // ref={(input) => setFileInput(input)}
         style={{ display: 'none' }}
         onChange={handleFileChange}
       />
