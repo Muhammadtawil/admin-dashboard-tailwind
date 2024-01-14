@@ -1,31 +1,23 @@
 "use client"
 import { Product } from "@/types/product";
-import { Box, Button, Table, TableCell, TableRow, Grid, FormControl, InputLabel, Select, MenuItem, IconButton } from "@mui/material";
+import { Box, Button, TableRow, Grid} from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { title } from "process";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
-import TablePagination from "@mui/material/TablePagination";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateField } from '@mui/x-date-pickers/DateField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs, { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import Swal from "sweetalert2";
-import { IoPersonAddSharp } from "react-icons/io5";
 import StyledDialogTitle from "@/components/shared/StyledDialogTitle";
 import CustomTypography, { HeadBox, CustomTextField, ValuesSelect, FormFooter } from "@/components/shared/formsComponents";
 import MemberSelect from "@/components/tasks/member_select";
 import { CircularPagination } from "@/components/tasks/pagination";
-import { MdOutlineVisibilityOff } from "react-icons/md";
-import { MdOutlineVisibility } from "react-icons/md";
-import CardDataStats from "@/components/CardDataStats";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -36,8 +28,6 @@ import {
         Typography,
         Avatar,
 } from "@material-tailwind/react";
-import BlogAddComponent from "../AddBlogForm";
-import BlogsCards from "../blogs_cards";
 
 
 
@@ -463,7 +453,7 @@ const AuthorsTable = () => {
                         {/* {showForm && <BlogAddComponent onCreate={''}  />} */}
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
 
-                                <Card
+                                {/* <Card
                                         shadow={false}
                                         className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
                                 >
@@ -621,7 +611,7 @@ const AuthorsTable = () => {
                                                         src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
                                                 />
                                         </CardBody>
-                                </Card>
+                                </Card> */}
                         </div>
                         <div className="max-w-full overflow-x-auto">
 
@@ -824,4 +814,4 @@ const AuthorsTable = () => {
 export default AuthorsTable;
 
 
-{/* */ }
+
