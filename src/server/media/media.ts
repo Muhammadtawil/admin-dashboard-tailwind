@@ -2,7 +2,8 @@
 
 
 
-import { authOptions } from "@/src/app/utils/authoptions";
+
+import { authOptions } from "@/app/utils/authoptions";
 import { getServerSession } from "next-auth/next";
 const media_url = process.env.MEDIA_URL;
 const createMedia_url = process.env.CREATE_FOLDER_URL

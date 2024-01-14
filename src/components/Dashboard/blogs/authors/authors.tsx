@@ -453,11 +453,13 @@ const AuthorsTable = () => {
                         {/* {showForm && <BlogAddComponent onCreate={''}  />} */}
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
 
-                                {/* <Card
+                                <Card
+                                        placeholder="Your Placeholder" 
                                         shadow={false}
                                         className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
                                 >
                                         <CardHeader
+                                                placeholder="Your Placeholder" 
                                                 floated={false}
                                                 shadow={false}
                                                 color="transparent"
@@ -465,8 +467,9 @@ const AuthorsTable = () => {
                                         >
                                                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                                         </CardHeader>
-                                        <CardBody className="relative py-14 px-6 md:px-12">
+                                        <CardBody placeholder="Your Placeholder"  className="relative py-14 px-6 md:px-12">
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
@@ -474,16 +477,18 @@ const AuthorsTable = () => {
                                                         30 Article
                                                 </Typography>
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
                                                 >
                                                         Joined Us in: 12/5/2023
                                                 </Typography>
-                                                <Typography variant="h5" className="mb-4 text-gray-400">
+                                                <Typography placeholder="Your Placeholder"  variant="h5" className="mb-4 text-gray-400">
                                                         Tania Andrew
                                                 </Typography>
                                                 <Avatar
+                                                        placeholder="Your Placeholder" 
                                                         size="xl"
                                                         variant="circular"
                                                         alt="tania andrew"
@@ -494,10 +499,12 @@ const AuthorsTable = () => {
                                 </Card>
                             
                                 <Card
+                                        placeholder="Your Placeholder" 
                                         shadow={false}
                                         className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
                                 >
                                         <CardHeader
+                                                placeholder="Your Placeholder" 
                                                 floated={false}
                                                 shadow={false}
                                                 color="transparent"
@@ -505,8 +512,9 @@ const AuthorsTable = () => {
                                         >
                                                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                                         </CardHeader>
-                                        <CardBody className="relative py-14 px-6 md:px-12">
+                                        <CardBody placeholder="Your Placeholder"  className="relative py-14 px-6 md:px-12">
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
@@ -514,16 +522,18 @@ const AuthorsTable = () => {
                                                         30 Article
                                                 </Typography>
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
                                                 >
                                                         Joined Us in: 12/5/2023
                                                 </Typography>
-                                                <Typography variant="h5" className="mb-4 text-gray-400">
+                                                <Typography placeholder="Your Placeholder"  variant="h5" className="mb-4 text-gray-400">
                                                         Tania Andrew
                                                 </Typography>
                                                 <Avatar
+                                                        placeholder="Your Placeholder" 
                                                         size="xl"
                                                         variant="circular"
                                                         alt="tania andrew"
@@ -534,10 +544,12 @@ const AuthorsTable = () => {
                                 </Card>
                               
                                 <Card
+                                        placeholder="Your Placeholder" 
                                         shadow={false}
                                         className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
                                 >
                                         <CardHeader
+                                                placeholder="Your Placeholder" 
                                                 floated={false}
                                                 shadow={false}
                                                 color="transparent"
@@ -545,8 +557,9 @@ const AuthorsTable = () => {
                                         >
                                                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                                         </CardHeader>
-                                        <CardBody className="relative py-14 px-6 md:px-12">
+                                        <CardBody placeholder="Your Placeholder"  className="relative py-14 px-6 md:px-12">
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
@@ -554,16 +567,18 @@ const AuthorsTable = () => {
                                                         30 Article
                                                 </Typography>
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
                                                 >
                                                         Joined Us in: 12/5/2023
                                                 </Typography>
-                                                <Typography variant="h5" className="mb-4 text-gray-400">
+                                                <Typography placeholder="Your Placeholder" variant="h5" className="mb-4 text-gray-400">
                                                         Tania Andrew
                                                 </Typography>
                                                 <Avatar
+                                                        placeholder="Your Placeholder" 
                                                         size="xl"
                                                         variant="circular"
                                                         alt="tania andrew"
@@ -574,10 +589,12 @@ const AuthorsTable = () => {
                                 </Card>
 
                                 <Card
+                                        placeholder="Your Placeholder" 
                                         shadow={false}
                                         className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
                                 >
                                         <CardHeader
+                                                placeholder="Your Placeholder" 
                                                 floated={false}
                                                 shadow={false}
                                                 color="transparent"
@@ -585,8 +602,9 @@ const AuthorsTable = () => {
                                         >
                                                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                                         </CardHeader>
-                                        <CardBody className="relative py-14 px-6 md:px-12">
+                                        <CardBody placeholder="Your Placeholder"  className="relative py-14 px-6 md:px-12">
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
@@ -594,16 +612,18 @@ const AuthorsTable = () => {
                                                         30 Article
                                                 </Typography>
                                                 <Typography
+                                                        placeholder="Your Placeholder" 
                                                         variant="h2"
                                                         color="white"
                                                         className="mb-6 font-medium leading-[1.5]"
                                                 >
                                                         Joined Us in: 12/5/2023
                                                 </Typography>
-                                                <Typography variant="h5" className="mb-4 text-gray-400">
+                                                <Typography placeholder="Your Placeholder"  variant="h5" className="mb-4 text-gray-400">
                                                         Tania Andrew
                                                 </Typography>
                                                 <Avatar
+                                                        placeholder="Your Placeholder" 
                                                         size="xl"
                                                         variant="circular"
                                                         alt="tania andrew"
@@ -611,7 +631,7 @@ const AuthorsTable = () => {
                                                         src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
                                                 />
                                         </CardBody>
-                                </Card> */}
+                                </Card>
                         </div>
                         <div className="max-w-full overflow-x-auto">
 

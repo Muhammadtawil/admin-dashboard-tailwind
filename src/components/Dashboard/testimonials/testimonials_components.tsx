@@ -86,7 +86,7 @@ export default function TestimonialsComponent() {
                                     <Tooltip title={'Edit'}>
                                     <button
                                         className='GenerateQuote_next'
-                                        placeholder="Edit"
+                                        // placeholder="Edit"
                                     // onClick={copyToClipboard}
                                     >
                                         <MdEdit />

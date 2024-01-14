@@ -116,7 +116,7 @@ export default function ServicesComponent({ servicesData,onCreate ,onDelete,onUp
                                         <Tooltip title={'Edit'}>
                                             <button
                                                 className='GenerateQuote_next'
-                                                placeholder="Edit"
+                                                // placeholder="Edit"
                                                 onClick={() => handleEditClick(service)}
                                             >
                                                 <MdEdit />
@@ -129,7 +129,7 @@ export default function ServicesComponent({ servicesData,onCreate ,onDelete,onUp
                                         <Tooltip title={'Delete'}>
                                             <button
                                                 className='GenerateQuote_next'
-                                                placeholder="Delete"
+                                                // placeholder="Delete"
                                                 onClick={async() => {
                                                     await Swal.fire({
                                                       title: t('deleteTitle'),

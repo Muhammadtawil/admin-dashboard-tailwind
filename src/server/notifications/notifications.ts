@@ -1,4 +1,5 @@
-import { authOptions } from "@/src/app/utils/authoptions";
+
+import { authOptions } from "@/app/utils/authoptions";
 import { getServerSession } from "next-auth/next";
 const notifications_url = process.env.GET_NOTIFICATIONS_URL;
 

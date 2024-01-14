@@ -56,7 +56,7 @@ const ContactsCards: React.FC<ContactsCards> = ({
           <Tooltip title={Phone}>
             <button
               className='GenerateQuote_next hover:text-secondary text-xl'
-              placeholder="Edit"
+              // placeholder="Edit"
             // onClick={copyToClipboard}
             >
               <div className="text-2xl">
@@ -71,7 +71,7 @@ const ContactsCards: React.FC<ContactsCards> = ({
           <Tooltip title={website}>
             <button
               className='GenerateQuote_next hover:text-secondary text-xl'
-              placeholder="Edit"
+              // placeholder="Edit"
             // onClick={copyToClipboard}
             >
               <div className="text-2xl">

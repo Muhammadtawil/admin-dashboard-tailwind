@@ -18,6 +18,7 @@ export function CircularPagination({ totalPages, activePage, onPageChange }:{ to
   return (
     <div className="flex items-center gap-4">
       <Button
+        placeholder="Your Placeholder" 
         variant="text"
         className="flex items-center gap-2 rounded-full"
         onClick={prev}
@@ -28,6 +29,7 @@ export function CircularPagination({ totalPages, activePage, onPageChange }:{ to
       <div className="flex items-center gap-1 text-graydark dark:text-white text-center">
         {Array.from({ length: totalPages }).map((_, index) => (
           <IconButton
+          placeholder="Your Placeholder" 
             key={index + 1}
             variant={activePage === index + 1 ? "filled" : "text"}
             color="gray"
@@ -39,6 +41,7 @@ export function CircularPagination({ totalPages, activePage, onPageChange }:{ to
         ))}
       </div>
       <Button
+        placeholder="Your Placeholder" 
         variant="text"
         className="flex items-center gap-2 rounded-full"
         onClick={next}

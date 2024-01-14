@@ -2,7 +2,8 @@
 
 
 
-import { authOptions } from "@/src/app/utils/authoptions";
+
+import { authOptions } from "@/app/utils/authoptions";
 import { getServerSession } from "next-auth/next";
 const events_url = process.env.EVENTS_URL;
 const public_event_url=process.env.PUBLIC_EVENTS_URL

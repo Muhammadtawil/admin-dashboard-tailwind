@@ -67,11 +67,13 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
               className="blogCard hover:bg-boxdark "
                         >
                             <Card
+                                placeholder="Card" 
                         key={index}
                 shadow={false}
                 className="relative grid h-[40rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center rounded-lg hover:bg-boxdark"
             >
-                <CardHeader
+                                <CardHeader
+                                    placeholder="Card" 
                     floated={false}
                     shadow={false}
                     color="transparent"
@@ -111,7 +113,7 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
     <Tooltip title={'Edit'}>
         <button
             className='GenerateQuote_next hover:text-secondary'
-            placeholder="Edit"
+            // placeholder="Edit"
         // onClick={copyToClipboard}
         >
             <MdEdit />
@@ -124,7 +126,7 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
     <Tooltip title={'Delete'}>
         <button
             className='GenerateQuote_next hover:text-danger'
-                                        placeholder="Delete"
+                                        // placeholder="Delete"
                                      
         // onClick={copyToClipboard}
         >
@@ -135,11 +137,11 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
 
 </div>
 </div>
-                <CardBody className="relative py-14 px-6 md:px-12">
+                <CardBody placeholder="Your Placeholder"  className="relative py-14 px-6 md:px-12">
                
        
                  
-                    <Typography variant="h5" className="mb-4 text-gray-400 text-xlg  font-extrabold">
+                    <Typography placeholder="Your Placeholder" variant="h5" className="mb-4 text-gray-400 text-xlg  font-extrabold">
                         {member.userName}
                     </Typography>
 
@@ -151,7 +153,8 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
                     >
                        {member.userPosition}
                     </p>
-                    <Typography
+                                    <Typography
+                                        placeholder="Your Placeholder" 
                         variant="h2"
                         color="white"
                         className="mb-6 font-medium leading-[1.5]"
@@ -241,7 +244,7 @@ export default function TeamCards({ teamsData }: { teamsData: any }) {
                                         <Tooltip title={member.userBio}>
         <button
             className='GenerateQuote_next hover:text-secondary text-xl'
-            placeholder="Edit"
+            // placeholder="Edit"
         // onClick={copyToClipboard}
         >
             <ImProfile />
