@@ -16,7 +16,7 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
 const locale=useLocale()
   const [formValues, setFormValues] = useState({
-    userName: "",
+    userEmail: "",
     password: "",
   });
   const [error, setError] = useState("");
@@ -32,7 +32,7 @@ const locale=useLocale()
       localStorage.removeItem('temporaryOTP');
       const res = await signIn("credentials", {
         redirect: false,
-        userName: formValues.userName,
+        userEmail: formValues.userEmail,
         password: formValues.password,
         callbackUrl: "/en/dashboard/main",
       });
@@ -45,7 +45,7 @@ const locale=useLocale()
         router.replace(callbackUrl);
         // revalidateTag('notifications')
       } else {
-        setError("invalid UserName or password");
+        setError("invalid Email or password");
       }
     } catch (error: any) {
       setLoading(false);
@@ -88,8 +88,8 @@ const locale=useLocale()
                       <input
                         className="form-control"
                         type="text"
-                        name="userName"
-                        value={formValues.userName}
+                        name="userEmail"
+                        value={formValues.userEmail}
                         onChange={handleChange}
                         placeholder="Username or Email"
                       />

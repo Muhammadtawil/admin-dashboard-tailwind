@@ -57,7 +57,7 @@
     "main": "الرئيسية",
     "task": "المهام",
     "email": "البريد",
-    "clients": "الزبائن",
+    "clients": "الحالات",
     "team": "الفريق",
     "editor": "محرر النصوص",
     "blogs": "المقالات",
@@ -70,7 +70,16 @@
     "files": "الملفات",
     "references":"المراجع",
     "signOut": "الخروج",
-    "profile":"بروفايل"
+    "profile":"بروفايل",
+    "trainee":"المتدرجون",
+    "sessions":"الجلسات",
+    "traineeDetails":"البيانات",
+     "profile":"الملف الشخصي",
+    "notes":"الملاحظات",
+    "offices":"المكاتب",
+    "productivity":"اﻹنتاجية",
+    "authors":"الكتاب",
+    "signOut":"الخروج"
   },
 
   "LocaleSwitcher": {

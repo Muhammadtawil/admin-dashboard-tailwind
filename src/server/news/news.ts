@@ -4,7 +4,8 @@
 
 
 
-import { authOptions } from "@/src/app/utils/authoptions";
+
+import { authOptions } from "@/app/utils/authoptions";
 import { getServerSession } from "next-auth/next";
 const newss_url = process.env.NEWSIDURL;
 
@@ -37,30 +38,32 @@ export async function GetNews() {
 
 export default async function AddNews(data: FormData) {
   // Extract client data from the FormData object
-  const newsTitle = data.get("NewsTitle");
-  const newsContent = data.get("NewsContent");
-  const newsLang = data.get('newsLang');
-  const isFlag = data.get("isFlag");
+  // const newsTitle = data.get("NewsTitle");
+  // const newsContent = data.get("NewsContent");
+  // const newsLang = data.get('newsLang');
+  // const isFlag = data.get("isFlag");
+  // const newsCategory=data.get('newsCategory')
   const session = await getServerSession(authOptions);
 
-  const newssData = {
-    newsTitle: newsTitle,
-    newsContent: newsContent,
-    isFlag: isFlag == "ready" ? true : false,
-    newsImageUrl: "image",
-    newsLang:newsLang=='arabic'?"arabic":"english",
-  };
+  // const newssData = {
+  //   newsTitle: newsTitle,
+  //   newsContent: newsContent,
+  //   isFlag: isFlag == "ready" ? true : false,
+  //   newsImageUrl: "image",
+  //   newsLang: newsLang == 'arabic' ? "arabic" : "english",
+  //   newsCategory:newsCategory,
+  // };
 
-  const jsonData = JSON.stringify(newssData);
+  // const jsonData = JSON.stringify(newssData);
 
   const requestOptions = {
     method: "POST",
     headers: {
       Authorization: `Bearer ${session?.accessToken}`,
 
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
     },
-    body: jsonData,
+    body: data,
   };
 
   try {
@@ -111,14 +114,16 @@ export async function UpdateNews(data: FormData, newsId: string) {
   const newsTitle = data.get("newsTitle");
   const newsContent = data.get("newsContent");
   const isFlag = data.get("isFlag");
-  const newsLang = data.get('newsLang');
+  const newsLang = data.get('newsLang'); 
+  const newsCategory=data.get('newsCategory')
   const session = await getServerSession(authOptions);
 
   const newssData = {
     newsTitle: newsTitle,
     newsContent: newsContent,
     isFlag: isFlag == "ready" ? true : false,
-    newsLang:newsLang=='arabic'?"arabic":"english",
+    newsLang: newsLang == 'arabic' ? "arabic" : "english",
+    newsCategory: 'law',
   };
 
   const jsonData = JSON.stringify(newssData);

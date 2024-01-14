@@ -167,7 +167,7 @@ const BlogsTable = ({blogsData,onCreate,UpdateImage,onDelete,onUpdate}:{blogsDat
                     title={t('CreateBlog')}
                 />
             </div>
-            {showForm && <BlogAddComponent onCreate={onCreate} isEdit={ isEdit} editedValues={selectedTask} onUpdate={onUpdate} UpdateImage={UpdateImage}/>}
+            {showForm && <BlogAddComponent blogData={blogsData} onCreate={onCreate} isEdit={ isEdit} editedValues={selectedTask} onUpdate={onUpdate} UpdateImage={UpdateImage}/>}
 
             <div className="max-w-full overflow-x-auto">
 

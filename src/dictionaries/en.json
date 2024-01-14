@@ -60,7 +60,7 @@
     "main": "Dashboard",
     "task": "Tasks",
     "email": "Email",
-    "clients": "Clients",
+    "clients": "Cases",
     "team": "Team",
     "editor": "Editor",
     "blogs": "Blogs",
@@ -73,7 +73,16 @@
     "files": "Files",
     "references":"References",
     "signOut": "logout",
-    "profile":"profile"
+    "profile":"profile",
+    "trainee":"Trainee Lawyers",
+    "sessions":"Sessions",
+    "traineeDetails":"Bio",
+    "profile":"Profile",
+    "notes":"Notes",
+    "offices":"Offices",
+    "productivity":"Productivity",
+    "authors":"Authors",
+    "signOut":"LogOut"
   },
   "LocaleSwitcher": {
     "locale": "{locale, select, ar {العربية} en {English} other {Unknown}}"

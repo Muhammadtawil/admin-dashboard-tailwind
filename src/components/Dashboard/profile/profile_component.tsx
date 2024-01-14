@@ -294,7 +294,7 @@ const ProfileComponent = () => {
           </div>
         </div>
       </div>
-<ChatUI/>
+
     </>
   );
 };

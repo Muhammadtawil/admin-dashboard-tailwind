@@ -1,5 +1,6 @@
 // import LoadingSpinner from "@/components/dashboard/loading spinner/loadinSpinner";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import NewsComponent from "@/components/Dashboard/news";
 import dynamic from "next/dynamic";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 // Use dynamic import to load BlogsComponent lazily
@@ -12,7 +13,7 @@ export default function BlogPage() {
   return (
     <>
      <Breadcrumb pageName="News" />
-      <BlogsComponent />
+      <NewsComponent />
     </>
   );
 }

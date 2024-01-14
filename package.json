@@ -28,6 +28,7 @@
     "@types/react-dom": "18.2.7",
     "apexcharts": "^3.41.1",
     "autoprefixer": "10.4.14",
+    "bufferutil": "^4.0.8",
     "date-fns": "^3.0.6",
     "dayjs": "^1.11.10",
     "dompurify": "^3.0.6",
@@ -63,10 +64,13 @@
     "react-identicons": "^1.2.5",
     "react-jvectormap": "^0.0.16",
     "sass": "^1.69.5",
+    "socket.io-client": "^4.7.3",
     "styled-components": "^6.1.6",
     "sweetalert2": "^11.10.1",
     "swiper": "^11.0.5",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.3.3",
+    "utf-8-validate": "^5.0.10",
+    "ws": "^8.16.0"
   },
   "devDependencies": {
     "@types/dompurify": "^3.0.5",

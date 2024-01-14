@@ -19,7 +19,7 @@ export default function LoginFormTest() {
     const [showPassword, setShowPassword] = useState(false);
     const locale = useLocale()
     const [formValues, setFormValues] = useState({
-        userName: "",
+        userEmail: "",
         password: "",
     });
     const [error, setError] = useState("");
@@ -35,7 +35,7 @@ export default function LoginFormTest() {
             localStorage.removeItem('temporaryOTP');
             const res = await signIn("credentials", {
                 redirect: false,
-                userName: formValues.userName,
+                userEmail: formValues.userEmail,
                 password: formValues.password,
                 callbackUrl: "/en/dashboard/main",
             });
@@ -250,8 +250,8 @@ export default function LoginFormTest() {
                                     </label>
                                     <div className="relative"> 
                                         <input
-                                            value={formValues.userName}
-                                            name="userName"
+                                            value={formValues.userEmail}
+                                            name="userEmail"
                                             type="text"
                                             placeholder="Enter your email"
                                             onChange={handleChange}

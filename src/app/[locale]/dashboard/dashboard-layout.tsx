@@ -49,7 +49,7 @@ export default function RootLayout({
               
               </div>
           ) : (
-            <div className="flex h-screen overflow-hidden" dir={locale=="ar"?'rtl':""}>
+            <div className="flex h-screen overflow-hidden" dir={locale=="ar"?'':""}>
               {/* <!-- ===== Sidebar Start ===== --> */}
               <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
               {/* <!-- ===== Sidebar End ===== --> */}

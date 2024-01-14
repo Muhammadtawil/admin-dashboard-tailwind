@@ -2,11 +2,11 @@ const login_url = process.env.LOGIN_URL;
 
 export default async function SignIn(data: FormData) {
   // Extract client data from the FormData object
-  const userName = data.get("userName");
+  const userEmail = data.get("userEmail");
   const userPassword = data.get("userPassword");
 
   const userData = {
-    userName: userName,
+    userEmail: userEmail,
     password: userPassword,
   };
 

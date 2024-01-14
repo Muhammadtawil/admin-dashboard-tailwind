@@ -1,5 +1,6 @@
 // import LoadingSpinner from "@/components/dashboard/loading spinner/loadinSpinner";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import ClientsComponent from "@/components/Dashboard/clients";
 import dynamic from "next/dynamic";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 // Use dynamic import to load BlogsComponent lazily
@@ -11,8 +12,8 @@ const BlogsComponent = dynamic(() => import("../../../../components/Dashboard/cl
 export default function BlogPage() {
   return (
     <>
-     <Breadcrumb pageName="Blogs" />
-      <BlogsComponent />
+     <Breadcrumb pageName="Cases" />
+      <ClientsComponent />
     </>
   );
 }

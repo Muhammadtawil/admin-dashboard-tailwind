@@ -159,7 +159,7 @@ const t=useTranslations('SideBar')
                             fill=""
                           />
                         </svg>
-                        Dashboard
+                        {t('main')}
                         {/* <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-180"
@@ -254,7 +254,7 @@ const t=useTranslations('SideBar')
                         }}
                       >
              <RiArticleLine/>
-                       {'About Firm'}
+             {t('about')}
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-180"
@@ -289,7 +289,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Offices
+                             {t('offices')}
                             </Link>
                           </li>
                           <li>
@@ -300,7 +300,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                            Firm Profile
+                           {t('about')}
                             </Link>
                           </li>
                         </ul>
@@ -334,7 +334,7 @@ const t=useTranslations('SideBar')
                         }}
                       >
              <RiArticleLine/>
-                       {'Productivity'}
+                       {t('productivity')}
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-180"
@@ -368,7 +368,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Tasks
+                             {t('task')}
                             </Link>
                           </li>
                           <li>
@@ -379,7 +379,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Agenda
+                            {t('calendar')}
                             </Link>
                           </li>
                           <li>
@@ -390,7 +390,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Notes
+                           {t('notes')}
                             </Link>
                           </li>
                         </ul>
@@ -411,10 +411,10 @@ const t=useTranslations('SideBar')
                   return (
                     <React.Fragment>
                       <Link
-                         href={`/${locale}/dashboard/productivity`}
+                         href={`/${locale}/dashboard/trainee`}
                         className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                          (pathname === `/${locale}/dashboard/productivity` ||
-                            pathname.includes("productivity")) &&
+                          (pathname === `/${locale}/dashboard/trainee` ||
+                            pathname.includes("trainee")) &&
                           "bg-graydark dark:bg-meta-4"
                         }`}
                         onClick={(e) => {
@@ -425,7 +425,7 @@ const t=useTranslations('SideBar')
                         }}
                       >
              <RiArticleLine/>
-                       {'Trainee lawyers'}
+             {t('trainee')}
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-180"
@@ -453,37 +453,27 @@ const t=useTranslations('SideBar')
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                         <li>
                             <Link
-                                href={`/${locale}/dashboard/productivity/tasks`}
+                                href={`/${locale}/dashboard/trainee/bio`}
                               className={`first-letter:group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
-                                pathname ===`/${locale}/dashboard/productivity/tasks` &&
+                                pathname ===`/${locale}/dashboard/trainee/bio` &&
                                 "text-white"
                               }`}
                             >
-                             Tasks
+                             {t('traineeDetails')}
                             </Link>
                           </li>
                           <li>
                             <Link
-                                href={`/${locale}/dashboard/productivity/calendar`}
+                                href={`/${locale}/dashboard/trainee/sessions`}
                               className={`first-letter:group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
-                                pathname === `/${locale}/dashboard/productivity/calendar` &&
+                                pathname === `/${locale}/dashboard/trainee/sessions` &&
                                 "text-white"
                               }`}
                             >
-                             Agenda
+                             {t('sessions')}
                             </Link>
                           </li>
-                          <li>
-                            <Link
-                                href={`/${locale}/dashboard/productivity/notes`}
-                              className={`first-letter:group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
-                                pathname === `/${locale}/dashboard/productivity/notes` &&
-                                "text-white"
-                              }`}
-                            >
-                             Notes
-                            </Link>
-                          </li>
+                        
                         </ul>
                       </div>
                       {/* <!-- Dropdown Menu End --> */}
@@ -517,7 +507,7 @@ const t=useTranslations('SideBar')
                       fill=""
                     />
                   </svg>
-                  Profile
+                  {t('profile')}
                 </Link>
               </li>
 
@@ -544,7 +534,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Clients
+                 {t('clients')}
                 </Link>
               </li>
               <li>
@@ -556,7 +546,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Services
+                  {t('services')}
                 </Link>
               </li>
               <li>
@@ -568,7 +558,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Editor
+                  {t('editor')}
                 </Link>
               </li>
 
@@ -581,7 +571,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Email
+                  {t('email')}
                 </Link>
               </li>
 
@@ -594,7 +584,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  News
+                  {t('news')}
                 </Link>
               </li>
               <SidebarLinkGroup
@@ -654,7 +644,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Blogs
+                             {t('blogs')}
                             </Link>
                           </li>
                           <li>
@@ -665,7 +655,7 @@ const t=useTranslations('SideBar')
                                 "text-white"
                               }`}
                             >
-                             Authors
+                             {t("authors")}
                             </Link>
                           </li>
           
@@ -687,7 +677,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Teams
+                  {t('team')}
                 </Link>
               </li>
               <li>
@@ -699,7 +689,7 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Subscribers
+                  {t('subscribers')}
                 </Link>
               </li>
               <li>
@@ -711,31 +701,21 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  Testimonials
+                  {t("testimonials")}
                 </Link>
               </li>
+      
               <li>
                 <Link
-                   href={`/${locale}/dashboard/testimonials`}
+                   href={`/${locale}/dashboard/folders`}
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes("testimonials") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("folders") && "bg-graydark dark:bg-meta-4"
                   }`}
                 >
               
                   <LuListTodo />
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                   href={`/${locale}/dashboard/Folders`}
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes("news") && "bg-graydark dark:bg-meta-4"
-                  }`}
-                >
-              
-                  <LuListTodo />
-                  Folders
+                  {t('files')}
+
                 </Link>
               </li>
               <li>
@@ -747,11 +727,12 @@ const t=useTranslations('SideBar')
                 >
               
                   <LuListTodo />
-                  References
+                  {t('references')}
+
                 </Link>
               </li>
               {/* <!-- Menu Item Forms --> */}
-              <SidebarLinkGroup
+              {/* <SidebarLinkGroup
                 activeCondition={
                   pathname === `/${locale}/dashboard/forms` || pathname.includes("forms")
                 }
@@ -821,7 +802,7 @@ const t=useTranslations('SideBar')
                           />
                         </svg>
                       </Link>
-                      {/* <!-- Dropdown Menu Start --> */}
+                  
                       <div
                         className={`translate transform overflow-hidden ${
                           !open && "hidden"
@@ -852,15 +833,15 @@ const t=useTranslations('SideBar')
                           </li>
                         </ul>
                       </div>
-                      {/* <!-- Dropdown Menu End --> */}
+             
                     </React.Fragment>
                   );
                 }}
-              </SidebarLinkGroup>
+              </SidebarLinkGroup> */}
               {/* <!-- Menu Item Forms --> */}
 
               {/* <!-- Menu Item Tables --> */}
-              <li>
+              {/* <li>
                 <Link
                    href={`/${locale}/dashboard/tables`}
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
@@ -894,7 +875,7 @@ const t=useTranslations('SideBar')
                   </svg>
                   Tables
                 </Link>
-              </li>
+              </li> */}
               {/* <!-- Menu Item Tables --> */}
 
               {/* <!-- Menu Item Settings --> */}
@@ -935,7 +916,7 @@ const t=useTranslations('SideBar')
                       </clipPath>
                     </defs>
                   </svg>
-                  Settings
+                  {t('signOut')}
                 </Link>
               </li>
               {/* <!-- Menu Item Settings --> */}
@@ -943,14 +924,14 @@ const t=useTranslations('SideBar')
           </div>
 
           {/* <!-- Others Group --> */}
-          <div>
+          {/* <div>
             <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
               OTHERS
             </h3>
 
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Menu Item Chart --> */}
-              <li>
+              {/* <li>
                 <Link
                  href={`/${locale}/dashboard/chart`}
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
@@ -987,12 +968,12 @@ const t=useTranslations('SideBar')
                     </defs>
                   </svg>
                   Chart
-                </Link>
-              </li>
+                </Link> */}
+              {/* </li> */} 
               {/* <!-- Menu Item Chart --> */}
 
               {/* <!-- Menu Item Ui Elements --> */}
-              <SidebarLinkGroup
+              {/* <SidebarLinkGroup
                 activeCondition={pathname === "/ui" || pathname.includes("ui")}
               >
                 {(handleClick, open) => {
@@ -1062,9 +1043,9 @@ const t=useTranslations('SideBar')
                             fill=""
                           />
                         </svg>
-                      </Link>
+                      </Link> */}
                       {/* <!-- Dropdown Menu Start --> */}
-                      <div
+                      {/* <div
                         className={`translate transform overflow-hidden ${
                           !open && "hidden"
                         }`}
@@ -1091,16 +1072,16 @@ const t=useTranslations('SideBar')
                             </Link>
                           </li>
                         </ul>
-                      </div>
+                      </div> */}
                       {/* <!-- Dropdown Menu End --> */}
-                    </React.Fragment>
-                  );
-                }}
-              </SidebarLinkGroup>
+                    {/* </React.Fragment> */}
+                  {/* );
+                }} */}
+              {/* </SidebarLinkGroup> */}
               {/* <!-- Menu Item Ui Elements --> */}
 
               {/* <!-- Menu Item Auth Pages --> */}
-              <SidebarLinkGroup
+              {/* <SidebarLinkGroup
                 activeCondition={
                   pathname === "/auth" || pathname.includes("auth")
                 }
@@ -1169,7 +1150,7 @@ const t=useTranslations('SideBar')
                           />
                         </svg>
                       </Link>
-                      {/* <!-- Dropdown Menu Start --> */}
+               
                       <div
                         className={`translate transform overflow-hidden ${
                           !open && "hidden"
@@ -1198,14 +1179,14 @@ const t=useTranslations('SideBar')
                           </li>
                         </ul>
                       </div>
-                      {/* <!-- Dropdown Menu End --> */}
+             
                     </React.Fragment>
                   );
                 }}
-              </SidebarLinkGroup>
+              </SidebarLinkGroup> */}
               {/* <!-- Menu Item Auth Pages --> */}
-            </ul>
-          </div>
+            {/* </ul>
+          </div> */}
         </nav>
         {/* <!-- Sidebar Menu --> */}
       </div>

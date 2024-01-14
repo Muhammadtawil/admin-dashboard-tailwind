@@ -38,23 +38,25 @@ export async function GetBlogs() {
 
 export default async function AddBlog(data: FormData) {
   // Extract client data from the FormData object
-  const blogTitle = data.get("blogTitle");
-  const blogContent = data.get("blogContent");
-  const authorName = data.get("authorName");
-  const isFlag = data.get("isFlag");
-  const blogLang=data.get('blogLang')
+  // const blogTitle = data.get("blogTitle");
+  // const blogContent = data.get("blogContent");
+  // const authorName = data.get("authorName");
+  // const isFlag = data.get("isFlag");
+  // const blogLang = data.get('blogLang');
+  // // const blogImageUrl=data.get('image')
   const session = await getServerSession(authOptions);
+  // // data.append('blogTitle', blogTitle);
 
-  const blogsData = {
-    blogTitle: blogTitle,
-    blogContent: blogContent,
-    authorName: authorName,
-    isFlag: isFlag == "ready" ? true : false,
-    blogLang:blogLang=='arabic'?"arabic":"english",
-    blogImageUrl: "",
-  };
+  // const blogsData = {
+  //   blogTitle: blogTitle,
+  //   blogContent: blogContent,
+  //   authorName: authorName,
+  //   isFlag: isFlag == "ready" ? true : false,
+  //   blogLang:blogLang=='arabic'?"arabic":"english",
+   
+  // };
 
-  const jsonData = JSON.stringify(blogsData);
+  // const jsonData = JSON.stringify(blogsData);
 
   // Define the URL for adding a client (replace with the correct endpoint)
 
@@ -62,10 +64,10 @@ export default async function AddBlog(data: FormData) {
     method: "POST",
     headers: {
       Authorization: `Bearer ${session?.accessToken}`,
-
-      "Content-Type": "application/json",
+      // 'Content-Type': 'multipart/form-data',
+      // "Content-Type": "application/json",
     },
-    body: jsonData,
+    body: data,
   };
 
   try {

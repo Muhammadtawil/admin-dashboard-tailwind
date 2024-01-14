@@ -1,8 +1,7 @@
 
 
 
-
-import { authOptions } from "@/src/app/utils/authoptions";
+import { authOptions } from "@/app/utils/authoptions";
 import { getServerSession } from "next-auth/next";
 import { revalidatePath, } from "next/cache";
 

@@ -7,6 +7,7 @@ import DropdownUser from "./DropdownUser";
 import Image from "next/image";
 import LocaleSwitcher from "../locale/LocaleSwitcher";
 import { useState } from "react";
+import CurrentDate from "./Date/CurrentDate";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -71,7 +72,8 @@ const Header = (props: {
           </Link>
         </div>
         <div className="hidden sm:block">
-          <form >
+          <CurrentDate/>
+          {/* <form >
             <div className="relative">
               <button className="absolute left-0 top-1/2 -translate-y-1/2">
                 <svg
@@ -103,7 +105,7 @@ const Header = (props: {
                 className="w-full bg-transparent pl-9 pr-4 font-medium focus:outline-none xl:w-125"
               />
             </div>
-          </form>
+          </form> */}
         </div>
 
         <div className="flex items-center gap-3 2xsm:gap-7">
@@ -113,7 +115,7 @@ const Header = (props: {
             {/* <!-- Dark Mode Toggler --> */}
             <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
-            <button onClick={props.HandleRTL}>RTL</button>
+            {/* <button onClick={props.HandleRTL}>RTL</button> */}
 
             
             {/* <!-- Notification Menu Area --> */}

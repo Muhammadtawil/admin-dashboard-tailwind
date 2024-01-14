@@ -1,6 +1,6 @@
 "use client"
 
-import { TableRow } from "@mui/material";
+import { TableHead, TableRow } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
@@ -22,23 +22,25 @@ import useOpenController from "@/hooks/useOpenControl";
 import ClientSatsCard from "./clients_stats_card";
 import ClientTableHead from "./client_table_head";
 import { FormHead } from "./form_head";
+import CLientsForm from "./clients_form";
+import CardDataStats from "@/components/CardDataStats";
+import { FaRegStickyNote } from "react-icons/fa";
+import ClientExpandedRows from "./expanded_rows";
 
 
 
 
-const blogsData = blogData;
 
 
 
-
-const BlogsTable = () => {
+const ClientTable = ({clientsData,serviceList}:{clientsData:any,serviceList:any}) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage] = useState(5); // Set the fixed number of rows per page
   const [open, setOpen] = useState(false);
   const [openMember, setOpenMember] = useState(false);
   const [statusFilter, setStatusFilter] = useState('');
   const [selectedStatus, setSelectedStatus] = useState("");
-  const t = useTranslations('BlogPage');
+  const t=useTranslations('clientPage')
   const [isEdit, setIsEdit] = useState(false);
   const [selectedTask, setSelectedTask] = useState<Blog | undefined>(undefined);
   const [showForm, setShowForm] = useState(false);
@@ -155,27 +157,24 @@ const BlogsTable = () => {
   const endIndex = startIndex + rowsPerPage;
 
 
-  const filteredTasks = blogsData.filter(
-    (task) =>
-      !selectedStatus || task.status === selectedStatus
+  const filteredTasks = clientsData.filter(
+    (client:any) =>
+      !selectedStatus || client.clientStatus === selectedStatus
   );
 
-  if (filteredTasks.length === 0) {
-    return <TableRow>{/* ... */}</TableRow>;
-  }
   return (
 
-    <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
+    <div className="rounded-sm border border-stroke bg-white px-4 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <div className="flex flex-1 justify-items-center py-6 px-4 md:px-6 xl:px-7.5 max-sm:flex space-x-9  ">
         <h4 className="flex flex-1 text-xl font-semibold text-black dark:text-white order-1 max-sm:flex space-x-9 ">
           My Cases
         </h4>
         <FormHead
           handleClickOpen={addForm}
-          title={t('CreateBlog')}
+          title={t('addClient')}
         />
       </div>
-      {showForm && <BlogAddComponent onCreate={''} isEdit={isEdit} editedValues={selectedTask} onUpdate={''} />}
+      {showForm && <CLientsForm onCreate={''} isEdit={isEdit} editedValues={selectedTask} onUpdate={''} serviceList={serviceList} UpdateImage={undefined} />}
     <ClientSatsCard/>
       <div className="max-w-full overflow-x-auto">
 
@@ -187,10 +186,10 @@ const BlogsTable = () => {
           </h4>
 
         </div>
-        <table className="w-full table-auto">
+        <table className="w-1/2 table-auto">
        <ClientTableHead selectedStatus={selectedStatus} handleStatusFilterChange={handleStatusFilterChange}/>
           <tbody>
-            {filteredTasks.slice(startIndex, endIndex).map((item, key) => (
+            {filteredTasks.slice(startIndex, endIndex).map((item:any, key:any) => (
               <React.Fragment key={key}>
          
                 <tr key={key}>
@@ -207,18 +206,10 @@ const BlogsTable = () => {
                       
               
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                    <div className="h-12.5 w-21 rounded-md">
                  
-                      <Image
-                        src={item.image}
-                        width={60}
-                        height={50}
-                        alt="Product"
-                      />
-                    </div>
 
                     <p className="text-sm text-black dark:text-white">
-                      {item.title}
+                      {item.clientName}
                     </p>
                   </div>
                 
@@ -226,37 +217,39 @@ const BlogsTable = () => {
 
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <div className="flex items-center gap-3 p-2.5 xl:p-5">
-                    <div className="flex-shrink-0">
-                      <Image src='/images/user/user-05.png' alt="Brand" width={48} height={48} />
-                    </div>
                     <p className="hidden text-black dark:text-white sm:block">
-                      {item.author}
+                      {item.clientPhone}
                     </p>
                   </div>
                 </td>
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <p className="text-black dark:text-white">
-                    {item.Date}
+                    {item.chosenServiceName}
                   </p>
                 </td>
-                <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                  <p className="text-black dark:text-white">
-                    {item.language}
-                  </p>
-                </td>
+              
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <p
-                    className={`inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium ${item.status === "deployed"
+                    className={`inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium ${item.clientStatus === "COMPLETED"
                       ? "text-success bg-success"
-                      : item.status === "draft"
+                      : item.clientStatus === "PENDING"
                         ? "text-danger bg-danger"
                         : "text-warning bg-warning"
                       }`}
                   >
-                    {item.status}
+                    {item.clientStatus}
                   </p>
                 </td>
-
+                <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                  <p className="text-black dark:text-white">
+                  {item.clientEmail ? item.clientEmail : t('noEmail')}
+                  </p>
+                  </td>
+                  <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                  <p className="text-black dark:text-white">
+                  {item.clientMessage ? item.clientMessage : t('noMsg')}
+                  </p>
+                </td>
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <div className="flex items-center space-x-3.5">
                     <button className="hover:text-primary" onClick={() => handleEditClick(item)}>
@@ -295,51 +288,13 @@ const BlogsTable = () => {
                 </td>
                 </tr>
                 {expandedRows.has(key) && (
-                <tr>
-                    <td colSpan={5}>
-                    <h1>{ item.author}</h1>
-                  </td>
-                  <td >
-                <h2>b</h2>
-                  </td >
-                  <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                  <div className="flex items-center space-x-3.5">
-                    <button className="hover:text-primary" onClick={() => handleEditClick(item)}>
-                      <MdOutlineVisibility />
-                    </button>
-                    <button className="hover:text-danger" onClick={async () => {
-                      await Swal.fire({
-                        title: t('deleteTitle'),
-                        text: t('deleteTitle2'),
-                        icon: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#3085d6",
-                        cancelButtonColor: "#d33",
-                        confirmButtonText: t('yes'),
-                        focusConfirm: true,
-                        allowEscapeKey: true,
-                        cancelButtonText: t('cancel'),
-                        color: 'red',
 
-                      }).then((result) => {
-                        if (result.isConfirmed && result.value === true) {
-                          console.log(result)
-                          //    deleteTask(isAssigned ? task.assignedTaskId : task.taskId);
-                          Swal.fire(t('deleteSuccess'));
-                        }
-                      });
-                    }}>
-                      <RiDeleteBin6Line />
-                    </button>
-                    <button className="hover:text-primary" onClick={() => handleEditClick(item)}>
-                      <FaRegEdit />
+<tr>
+<td className="mb-4 col-span-8 row-span-3"  colSpan={9} >
+<ClientExpandedRows/>
 
-                    </button>
-
-                  </div>
-                </td>
-
-                </tr>
+</td>
+</tr>
               )}
                 </React.Fragment>
             ))}
@@ -369,4 +324,4 @@ const BlogsTable = () => {
   );
 };
 
-export default BlogsTable;
+export default ClientTable;

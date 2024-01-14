@@ -42,21 +42,21 @@ export const authOptions: NextAuthOptions = {
       CredentialsProvider({
         name: "LawFirm",
         credentials: {
-          userName: {
-            label: "Username",
+          userEmail: {
+            label: "userEmail",
             type: "text",
-            placeholder: "Your User Name",
+            placeholder: "Your Email",
           },
           password: { label: "Password", type: "password" },
         },
   
         async authorize(credentials, req) {
-          if (!credentials?.userName || !credentials?.password) return null;
-          const { userName, password } = credentials;
+          if (!credentials?.userEmail || !credentials?.password) return null;
+          const { userEmail, password } = credentials;
           const res = await fetch(`${Backend_URL}`, {
             method: "POST",
             body: JSON.stringify({
-              userName,
+              userEmail,
               password,
             }),
             headers: {

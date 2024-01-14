@@ -230,7 +230,7 @@ const TeamTable = ({teamsData}:{teamsData:any}) => {
                         </div>
                         <TeamCards teamsData={teamsData}/>
 
-                {showForm && <BlogAddComponent onCreate={''} onUpdate={''} isEdit={false} editedValues={''} UpdateImage={''}  />}
+                {showForm && <BlogAddComponent onCreate={''} onUpdate={''} isEdit={false} editedValues={''} UpdateImage={''} blogData={undefined}  />}
                        
                         <div className="max-w-full overflow-x-auto">
 
@@ -330,7 +330,7 @@ const TeamTable = ({teamsData}:{teamsData:any}) => {
                         
                         <div className="flex flex-1 justify-items-center py-6 px-4 md:px-6 xl:px-7.5 max-sm:flex space-x-9  ">
                                         <h4 className="flex flex-1 text-xl font-semibold text-black dark:text-white order-1 max-sm:flex space-x-9 ">
-                                                Authors Table
+                                                Team Stats
                                         </h4>
 
                         </div>
