@@ -120,7 +120,7 @@ export default function OfficesComponent() {
                                         <Tooltip title={'Edit'}>
                                             <button
                                                 className='GenerateQuote_next'
-                                                placeholder="Edit"
+                                                // placeholder="Edit"
                                                 onClick={() => handleEditClick(office)}
                                             >
                                                 <MdEdit />
@@ -133,7 +133,7 @@ export default function OfficesComponent() {
                                         <Tooltip title={'Delete'}>
                                             <button
                                                 className='GenerateQuote_next'
-                                                placeholder="Delete"
+                                                // placeholder="Delete"
                                                 onClick={async () => {
                                                     await Swal.fire({
                                                         title: t('deleteTitle'),
