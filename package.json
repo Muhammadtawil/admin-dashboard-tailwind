@@ -41,6 +41,7 @@
     "google-translate-api-x": "^10.6.7",
     "html-to-text": "^9.0.5",
     "keen-slider": "^6.8.6",
+    "mui-one-time-password-input": "^2.0.1",
     "next": "^14.0.2",
     "next-auth": "^4.24.5",
     "next-intl": "^2.21.0",
