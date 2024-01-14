@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-import withReactContent from "sweetalert2-react-content";
+
 
 export default async function Login(data: FormData) {
   // Extract client data from the FormData object

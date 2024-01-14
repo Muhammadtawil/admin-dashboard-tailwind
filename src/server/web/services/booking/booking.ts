@@ -1,19 +1,9 @@
 
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
-const MySwal = withReactContent(Swal);
 
-const alertContent = () => {
-  MySwal.fire({
-    title: "Done!",
-    text: "Your message was successfully sent and will call you soon",
-    icon: "success",
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  });
-};
+
+
+
 export default async function AddClient(data: FormData) {
   // Extract client data from the FormData object
   const clientName = data.get("clientName");

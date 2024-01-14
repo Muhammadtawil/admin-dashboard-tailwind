@@ -1,9 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import { useLocale, useTranslations } from 'next-intl'
 import { arLocale, enLocale } from '../../../../../localeConfig copy'
@@ -11,7 +10,6 @@ import StyledDialogTitle from '@/components/shared/StyledDialogTitle'
 import { Box, Grid } from '@mui/material'
 import CustomTypography, { CustomTextField, FormFooter, HeadBox, ValuesSelect } from '@/components/shared/formsComponents'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateField } from '@mui/x-date-pickers/DateField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs, { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
@@ -19,6 +17,10 @@ import { DateTimePicker } from '@mui/x-date-pickers'
 import { usePathname } from 'next/navigation'
 const statusValues = ["completed", "postponed", "cancelled","pending"];
 const priorityValues = ["HIGH", "MEDIUM", "LOW"];
+
+
+
+
 export default function TraineeSessions() {
   const [open, setOpen] = useState(false);
   const [openMember, setOpenMember] = useState(false);
