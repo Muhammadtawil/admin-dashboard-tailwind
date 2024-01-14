@@ -1,5 +1,5 @@
-import VerifyResetCode from '@/components/dashboard/login/otp/otp'
-import React from 'react'
+import VerifyResetCode from "@/components/Dashboard/login/otp/otp";
+
 
 export default function VerifyCodePage() {
   return (

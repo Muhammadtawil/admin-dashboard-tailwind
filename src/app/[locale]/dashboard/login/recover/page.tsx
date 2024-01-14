@@ -1,4 +1,5 @@
-import Recover from "@/components/dashboard/login/recover/recover";
+import Recover from "@/components/Dashboard/login/recover/recover";
+
 
 
 

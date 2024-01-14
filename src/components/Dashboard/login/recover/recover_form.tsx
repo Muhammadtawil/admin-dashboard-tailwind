@@ -3,8 +3,9 @@ import {useState } from "react";
 // import { useRouter, useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import { useLocale } from "next-intl";
-import { successAlert } from "../../alerts/alerts";
+
 import { useRouter } from "next/navigation";
+import { successAlert } from "@/components/shared/alerts/alerts";
 
 
 

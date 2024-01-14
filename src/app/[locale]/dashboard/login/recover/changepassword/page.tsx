@@ -1,5 +1,6 @@
+import ResetPassword from "@/components/Dashboard/login/changePassword/resetPassword";
 
-import ResetPassword from "@/components/dashboard/login/changePassword/resetPassword";
+
 
 
 export default function ChangePassword() {
