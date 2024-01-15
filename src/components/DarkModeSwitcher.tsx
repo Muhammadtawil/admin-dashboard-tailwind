@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import useColorMode from '../hooks/useColorMode';
 
 const DarkModeSwitcher = () => {
@@ -9,6 +9,32 @@ const DarkModeSwitcher = () => {
     document.documentElement.classList.add(colorMode as string);
   }, [colorMode]);
 
+ const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Retrieve the user's preference from local storage
+    const storedPreference = localStorage.getItem("theme");
+    if (storedPreference === "dark") {
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+    useEffect(() => {
+    // Update the user's preference in local storage
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+
+    // Update the class on the <html> element to apply the selected mode
+    const htmlElement = document.querySelector("html");
+    if (isDarkMode) {
+      htmlElement?.classList.add("dark");
+    } else {
+      htmlElement?.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   return (
     <li>
@@ -19,12 +45,7 @@ const DarkModeSwitcher = () => {
       >
         <input
           type="checkbox"
-          onChange={() => {
-            if (typeof setColorMode === 'function') {
-              console.log('Toggling dark mode'); // Add this log
-              setColorMode(colorMode === 'light' ? 'dark' : 'light');
-            }
-          }}
+          onChange={handleToggle}
           className="dur absolute top-0 z-50 m-0 h-full w-full cursor-pointer opacity-0"
         />
         <span
